@@ -13,3 +13,4 @@ namespace Desafio.Repository.Interfaces
         double CalcularConsumo(double distancia);
     }
 }
+   
