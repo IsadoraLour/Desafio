@@ -7,11 +7,10 @@ using System.Threading.Tasks;
 
 namespace Desafio.Repository.Interfaces
 {
-    public interface IVeiculo
+    public interface ICarro : IVeiculo
     {
-        string Modelo { get; set; }
-        double ConsumoPorKm { get; set; }
-        void ExibirDetalhes();
-        double CalcularConsumo(double distancia);
+        string Tipo { get; set; }
+        bool Hibrido { get; set; }
+        new double CalcularConsumo(double distancia);
     }
 }

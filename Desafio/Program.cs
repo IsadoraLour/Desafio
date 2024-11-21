@@ -1,28 +1,25 @@
 ﻿using Desafio.Entidades;
+using Desafio.Repository;
 using Desafio.Repository.Interfaces;
 
+using System;
+using System.Collections.Generic;
+
 class Program
-
 {
-    static void Main()
+    //static void Main(string[] args)
+    //{
+    //    CaminhaoRepository caminhaoController = new CaminhaoRepository();
 
-    {
-        List<IVeiculo> veiculos = new List<IVeiculo>
+    //    caminhaoController.AdicionarCaminhao("Scania", 5, 10, true);
+    //    caminhaoController.AdicionarCaminhao("Mercedes-Benz", 6, 20, false);
+    //    caminhaoController.AdicionarCaminhao("Volvo", 7, 15, true);
 
-        {
-            new Carro { Modelo = "Fiat", Ano = 2015, CapacidadeTanque = 25, ConsumoPorKm = 15, Tipo = "Prata", Hibrido = false },
+    //    Console.WriteLine("\nLista de caminhões:");
+    //    caminhaoController.ListarCaminhoes();
 
-            new Caminhao { Modelo = "Ford", Ano = 2012, CapacidadeTanque = 100, ConsumoPorKm = 2, CapacidadeCarga = 10, PesoCarga = 20 }
-        };
-
-        foreach (IVeiculo veiculo in veiculos)
-
-        {
-            veiculo.ExibirDetalhes();
-
-            Console.WriteLine($"Consumo para 150 km: {veiculo.CalcularConsumo(100)} litros\n");
-        }
-
-    }
-
+    //    double distancia = 100;
+    //    Console.WriteLine($"\nCalculando consumo para uma distância de {distancia} km:");
+    //    caminhaoController.CalcularConsumoCaminhoes(distancia);
+    //}
 }

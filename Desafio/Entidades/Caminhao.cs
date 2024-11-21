@@ -7,24 +7,22 @@ using System.Threading.Tasks;
 namespace Desafio.Entidades
 {
     public class Caminhao : Veiculo
-
     {
-        public double CapacidadeCarga { get; set; }
-        public double PesoCarga { get; set; }
+        public double CapacidadeCarga { get; set; } 
+        public bool Baú { get; set; }
+        public object EixoDuplo { get; internal set; }
 
         public override void ExibirDetalhes()
-
         {
             base.ExibirDetalhes();
-
-            Console.WriteLine($"Capacidade de Carga: {CapacidadeCarga} Toneladas, Peso da Carga: {PesoCarga} Toneladas");
+            Console.WriteLine($"Capacidade de Carga: {CapacidadeCarga} toneladas");
+            Console.WriteLine($"Tipo Baú: {(Baú ? "Sim" : "Não")}");
         }
+
         public override double CalcularConsumo(double distancia)
-
         {
-            double fatorCarga = 1 + (PesoCarga / CapacidadeCarga) * 0.2; 
-            return distancia / (ConsumoPorKm * fatorCarga);
+            double fatorConsumo = Baú ? 1.5 : 1; 
+            return (distancia / (ConsumoPorKm * fatorConsumo));
         }
-
     }
 }

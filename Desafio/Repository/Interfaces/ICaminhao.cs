@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Desafio.Repository.Interfaces
 {
-    public interface IVeiculo
+    public interface ICaminhao
     {
-        string Modelo { get; set; }
-        double ConsumoPorKm { get; set; }
-        void ExibirDetalhes();
-        double CalcularConsumo(double distancia);
+        void AdicionarCaminhao(Caminhao caminhao);
+        void ListarCaminhoes();
+        void CalcularConsumoCaminhoes(double distancia);
     }
 }
+
